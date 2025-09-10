@@ -17,6 +17,7 @@ _: {
     settings = {
       # Optimizes storage by automatically finding store files with identical contents and replacing them with hard links to a single copy.
       auto-optimise-store = true;
+      experimental-features = ["nix-command" "flakes"];
     };
   };
 }
