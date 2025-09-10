@@ -15,8 +15,8 @@
     };
 
     hosts = {
-      "192.168.21.20" = ["master"];
-      "192.168.36.112" = ["worker"];
+      "10.0.0.1" = ["master"];
+      "10.0.0.2" = ["worker"];
     };
 
     # Enables DHCP on each ethernet and wireless interface.
