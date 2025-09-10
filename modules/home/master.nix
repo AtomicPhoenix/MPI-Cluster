@@ -13,7 +13,7 @@
 
       "worker" = {
         hostname = "worker";
-        identityFile = ["~/.ssh/ai-cluster-internal"];
+        identityFile = ["~/.ssh/ai-cluster-master"];
         port = 8102;
       };
     };
