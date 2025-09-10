@@ -14,6 +14,11 @@
       dns = "systemd-resolved";
     };
 
+    hosts = {
+      "192.168.21.20" = ["master"];
+      "192.168.36.112" = ["worker"];
+    };
+
     # Enables DHCP on each ethernet and wireless interface.
     useDHCP = lib.mkDefault true;
   };
