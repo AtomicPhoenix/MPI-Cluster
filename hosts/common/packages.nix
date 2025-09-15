@@ -25,6 +25,7 @@
     # Terminal
     tmux
     tree
+    fastfetch
 
     # OpenMPI
     mpi
