@@ -18,4 +18,13 @@
       ];
     };
   };
+
+  services.nfs.server = {
+    enable = true;
+    exports = ''
+      /nfs        10.0.0.0/24(insecure,rw,sync,no_root_squash,no_subtree_check,crossmnt,fsid=0)
+      /nfs/shared 10.0.0.0/24(insecure,rw,sync,no_root_squash,no_subtree_check)
+      /nfs/dirtwo 10.0.0.0/24(insecure,rw,sync,no_root_squash,no_subtree_check,nohide)
+    '';
+  };
 }

@@ -7,7 +7,7 @@
     firewall = {
       checkReversePath = false;
       enable = true;
-      allowedTCPPorts = [80];
+      allowedTCPPorts = [80 2049];
     };
 
     # Enable networking
