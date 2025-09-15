@@ -16,6 +16,12 @@
         identityFile = ["~/.ssh/ai-cluster-master"];
         port = 8102;
       };
+
+      "10.0.0.3" = {
+        hostname = "10.0.0.3";
+        identityFile = ["~/.ssh/ai-cluster-master"];
+        port = 8102;
+      };
     };
   };
 }
