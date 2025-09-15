@@ -25,8 +25,5 @@
       /nfs        10.0.0.0/24(insecure,rw,sync,no_root_squash,no_subtree_check,crossmnt,fsid=0)
       /nfs/shared 10.0.0.0/24(insecure,rw,sync,no_root_squash,no_subtree_check)
     '';
-    statdPort = 4000;
-    lockdPort = 4001;
-    mountdPort = 4002;
   };
 }
