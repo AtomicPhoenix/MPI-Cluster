@@ -21,13 +21,16 @@
         sudo nixos-rebuild switch --show-trace --flake ~/Nixos-Config/#$host
       }
 
-      # Attatch to tmux session
-      unattached="$(tmux ls | grep -v attached | head -1 | cut -d: -f1)"
-      echo $unattached
-      if [[ -z $unattached ]]; then
-          tmux new-session;
-      else
-          tmux attach-session -t "$unattatched"
+      # Ensure we're in terminal
+      if [ -t 1 ]; then
+        # Attatch to tmux session
+        unattached="$(tmux ls | grep -v attached | head -1 | cut -d: -f1)"
+        echo $unattached
+        if [[ -z $unattached ]]; then
+            tmux new-session;
+        else
+            tmux attach-session -t "$unattatched"
+        fi
       fi
     '';
 
