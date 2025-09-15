@@ -20,7 +20,7 @@
   };
 
   # Connect to NFS Server
-  fileSystems."/mnt/shared" = {
+  fileSystems."/nfs/shared" = {
     device = "10.0.0.2:/shared";
     fsType = "nfs";
   };
