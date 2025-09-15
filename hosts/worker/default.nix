@@ -23,6 +23,9 @@
   fileSystems."/nfs/shared" = {
     device = "10.0.0.2:/shared";
     fsType = "nfs";
+    options = [
+      "nfsvers=4.2"
+    ];
   };
 
   users.users.ai.openssh.authorizedKeys.keys = [
