@@ -6,7 +6,7 @@
     # Enable firewall
     firewall = {
       checkReversePath = false;
-      enable = false;
+      enable = true;
       allowedTCPPorts = [80 2049];
     };
 
