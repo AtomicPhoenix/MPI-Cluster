@@ -12,7 +12,7 @@
     interfaces.enp0s20f0u2 = {
       ipv4.addresses = [
         {
-          address = "10.0.0.1";
+          address = "10.0.0.2";
           prefixLength = 24;
         }
       ];

@@ -9,10 +9,10 @@
   # Define hostname.
   networking = {
     hostName = "worker";
-    interfaces.enp0s20f0u2 = {
+    interfaces.enp0s31f6 = {
       ipv4.addresses = [
         {
-          address = "10.0.0.1";
+          address = "10.0.0.3";
           prefixLength = 24;
         }
       ];
