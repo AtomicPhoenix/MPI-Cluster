@@ -11,6 +11,6 @@
 
     # Use latest kernel.
     kernelPackages = pkgs.linuxPackages_latest;
-    supportedFilesystems = ["ntfs nfs"];
+    supportedFilesystems = ["ntfs nfs nfs4"];
   };
 }
