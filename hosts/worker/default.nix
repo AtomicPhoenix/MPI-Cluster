@@ -9,13 +9,24 @@
   # Define hostname.
   networking = {
     hostName = "worker";
-    interfaces.enp0s31f6 = {
-      ipv4.addresses = [
-        {
-          address = "10.0.0.3";
-          prefixLength = 24;
-        }
-      ];
+    networkmanager.ensureProfiles.profiles.local_ethernet = {
+      connection = {
+        id = "local_ethernet";
+        interface-name = "enp0s31f6";
+        timestamp = "1757911697";
+        type = "ethernet";
+        uuid = "bf62aeee-376a-43c0-89a2-73dc70941ee7";
+      };
+      ethernet = {};
+      ipv4 = {
+        address1 = "10.0.0.81/24";
+        method = "manual";
+      };
+      ipv6 = {
+        addr-gen-mode = "default";
+        method = "auto";
+      };
+      proxy = {};
     };
   };
 
