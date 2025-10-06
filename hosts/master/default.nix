@@ -9,7 +9,7 @@
   # Define hostname.
   networking = {
     hostName = "master";
-    cluster_net = {
+    networkmanager.ensureProfiles.profiles.cluster_net = {
       connection = {
         id = "cluster_net";
         type = "ethernet";
