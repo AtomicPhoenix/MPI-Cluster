@@ -1,6 +1,7 @@
 {lib, ...}: {
   imports = [
     ./bash.nix
+    ./cuda.nix
     ./git.nix
     ./nix-direnv.nix
     ./tmux.nix
