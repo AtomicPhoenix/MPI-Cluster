@@ -52,6 +52,7 @@
     nixosConfigurations = {
       master = mkNixOsConfiguration "master";
       worker = mkNixOsConfiguration "worker";
+      worker-2 = mkNixOsConfiguration "worker-2";
     };
   };
 }
