@@ -9,19 +9,23 @@
   # Define hostname.
   networking = {
     hostName = "worker";
-    interfaces.enp0s31f6 = {
-      ipv4.addresses = [
-        {
-          address = "10.0.0.3";
-          prefixLength = 24;
-        }
-      ];
+    networkmanager.ensureProfiles.profiles.cluster_net = {
+      connection = {
+        id = "cluster_net";
+        interface-name = "enp0s31f6";
+        type = "ethernet";
+        uuid = "bf62aeee-376a-43c0-89a2-73dc70941ee7";
+      };
+      ipv4 = {
+        address1 = "10.0.0.81/24";
+        method = "manual";
+      };
     };
   };
 
   # Connect to NFS Server
   fileSystems."/nfs/shared" = {
-    device = "10.0.0.2:/shared";
+    device = "10.0.0.80:/shared";
     fsType = "nfs";
     options = [
       "nfsvers=4.2"

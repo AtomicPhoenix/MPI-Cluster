@@ -1,4 +1,10 @@
-{lib, ...}: {
+_: let
+  workerConfig = {hostname}: {
+    inherit hostname;
+    identityFile = ["~/.ssh/ai-cluster-master"];
+    port = 8102;
+  };
+in {
   imports = [
     ./common
   ];
@@ -11,17 +17,8 @@
         identityFile = ["~/.ssh/ai-cluster-github"];
       };
 
-      "worker" = {
-        hostname = "worker";
-        identityFile = ["~/.ssh/ai-cluster-master"];
-        port = 8102;
-      };
-
-      "10.0.0.3" = {
-        hostname = "10.0.0.3";
-        identityFile = ["~/.ssh/ai-cluster-master"];
-        port = 8102;
-      };
+      "worker" = workerConfig "worker";
+      "worker-2" = workerConfig "worker-2";
     };
   };
 }
