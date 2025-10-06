@@ -28,7 +28,7 @@
 
   # Connect to NFS Server
   fileSystems."/nfs/shared" = {
-    device = "10.0.0.2:/shared";
+    device = "10.0.0.80:/shared";
     fsType = "nfs";
     options = [
       "nfsvers=4.2"
