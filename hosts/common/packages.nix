@@ -39,5 +39,7 @@
     cudaPackages.cuda_cudart
     cudaPackages.backendStdenv
     nvtopPackages.nvidia
+
+    nvidia-container-toolkit
   ];
 }
