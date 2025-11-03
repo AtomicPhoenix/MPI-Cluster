@@ -29,5 +29,17 @@
 
     # OpenMPI
     mpi
+
+    # nvidia programs
+    cudaPackages.nccl
+    cudaPackages.cudatoolkit
+    cudaPackages.cuda_opencl
+    cudaPackages.cuda_nvcc
+    cudaPackages.cuda_gdb
+    cudaPackages.cuda_cudart
+    cudaPackages.backendStdenv
+    nvtopPackages.nvidia
+
+    nvidia-container-toolkit
   ];
 }
