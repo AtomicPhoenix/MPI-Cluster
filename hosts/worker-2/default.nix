@@ -23,15 +23,6 @@
     };
   };
 
-  # Connect to NFS Server
-  fileSystems."/nfs/shared" = {
-    device = "10.0.0.80:/shared";
-    fsType = "nfs";
-    options = [
-      "nfsvers=4.2"
-    ];
-  };
-
   users.users.ai.openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICq0GzHUelKoq7LVIb8ODTAau6Nehwa5UuctDWmWYj3d ai@master"
   ];
