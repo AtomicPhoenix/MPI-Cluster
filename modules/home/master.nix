@@ -1,5 +1,5 @@
 _: let
-  workerConfig = {hostname}: {
+  workerConfig = hostname: {
     inherit hostname;
     identityFile = ["~/.ssh/ai-cluster-master"];
     port = 8102;

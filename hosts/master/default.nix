@@ -1,10 +1,17 @@
-{lib, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     # Include common configuration
     ../common
   ];
+
+  hardware.enableAllFirmware = true;
+  hardware.firmware = [pkgs.linux-firmware];
 
   # Define hostname.
   networking = {
