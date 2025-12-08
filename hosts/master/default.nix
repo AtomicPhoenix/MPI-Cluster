@@ -28,6 +28,10 @@
       };
     };
   };
+  programs.ssh.forwardX11 = true;
+
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   services.nfs.server = {
     enable = true;
