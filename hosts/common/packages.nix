@@ -59,6 +59,7 @@
     libGL
     libGLU
     pkg-config
+    prrte
     sfml
     vcpkg
     vcpkg-tool
