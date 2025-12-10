@@ -23,5 +23,8 @@
     };
   };
 
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
   system.stateVersion = "25.05";
 }
