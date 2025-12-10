@@ -1,9 +1,9 @@
 _: {
-  networking.firewall.allowedTCPPorts = [8102];
+  networking.firewall.allowedTCPPorts = [22];
 
   services.openssh = {
     enable = true;
-    ports = [8102];
+    ports = [22];
     settings = {
       AllowUsers = ["ai"];
       UseDns = true;

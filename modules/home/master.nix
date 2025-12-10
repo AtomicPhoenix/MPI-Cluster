@@ -2,7 +2,7 @@ _: let
   workerConfig = hostname: {
     inherit hostname;
     identityFile = ["~/.ssh/ai-cluster-master"];
-    port = 8102;
+    port = 22;
   };
 in {
   imports = [
