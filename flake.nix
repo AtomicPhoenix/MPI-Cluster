@@ -50,9 +50,8 @@
       };
   in {
     nixosConfigurations = {
-      master = mkNixOsConfiguration "master";
-      worker = mkNixOsConfiguration "worker";
-      worker-2 = mkNixOsConfiguration "worker-2";
+      worker1 = mkNixOsConfiguration "worker1";
+      worker2 = mkNixOsConfiguration "worker2";
     };
   };
 }

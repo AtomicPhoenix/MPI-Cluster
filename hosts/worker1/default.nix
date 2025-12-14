@@ -8,19 +8,28 @@
 
   # Define hostname.
   networking = {
-    hostName = "worker-2";
+    hostName = "worker1";
     networkmanager.ensureProfiles.profiles.cluster_net = {
       connection = {
         id = "cluster_net";
-        interface-name = "enp0s20f0u2";
+        interface-name = "enp0s31f6";
         type = "ethernet";
-        uuid = "2d2bdf35-5b3e-471c-9b0a-549ce8506682";
+        uuid = "bf62aeee-376a-43c0-89a2-73dc70941ee7";
       };
       ipv4 = {
-        address1 = "10.0.0.82/24";
+        address1 = "10.0.0.81/24";
         method = "manual";
       };
     };
+  };
+
+  # Connect to NFS Server
+  fileSystems."/nfs/shared" = {
+    device = "10.0.0.80:/shared";
+    fsType = "nfs";
+    options = [
+      "nfsvers=4.2"
+    ];
   };
 
   users.users.gpgup.openssh.authorizedKeys.keys = [
