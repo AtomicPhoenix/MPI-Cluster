@@ -12,7 +12,7 @@
     networkmanager.ensureProfiles.profiles.cluster_net = {
       connection = {
         id = "cluster_net";
-        interface-name = "enp0s31f6";
+        interface-name = "enp0s20f0u3";
         type = "ethernet";
         uuid = "bf62aeee-376a-43c0-89a2-73dc70941ee7";
       };
