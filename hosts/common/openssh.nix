@@ -5,10 +5,10 @@ _: {
     enable = true;
     ports = [22];
     settings = {
-      AllowUsers = ["ai"];
+      AllowUsers = ["gpgup"];
       UseDns = true;
       X11Forwarding = false;
-      PasswordAuthentication = false;
+      PasswordAuthentication = true;
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "prohibit-password";
     };

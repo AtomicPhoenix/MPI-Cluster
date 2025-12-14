@@ -43,7 +43,7 @@
             home-manager = {
               useGlobalPkgs = true; # Use nixos's pkgs value
               extraSpecialArgs = inputs; # Pass arguments to home modules
-              users.ai.imports = [./modules/home/${hostname}.nix];
+              users.gpgup.imports = [./modules/home/${hostname}.nix];
             };
           }
         ];

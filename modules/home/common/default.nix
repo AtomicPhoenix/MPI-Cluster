@@ -8,8 +8,8 @@
   ];
 
   home = {
-    username = "ai";
-    homeDirectory = lib.mkForce "/home/ai";
+    username = "gpgup";
+    homeDirectory = lib.mkForce "/home/gpgup";
     stateVersion = "25.05";
   };
 }
