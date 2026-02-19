@@ -1,17 +1,24 @@
 {lib, ...}: {
   services.resolved.enable = true;
   networking = {
+    nameservers = ["8.8.8.8"];
+
     # Enable firewall
     firewall = {
       checkReversePath = false;
-      enable = true;
-      allowedTCPPorts = [80];
+      enable = false;
+      allowedTCPPorts = [80 2049];
     };
 
     # Enable networking
     networkmanager = {
       enable = true;
       dns = "systemd-resolved";
+    };
+
+    hosts = {
+      "10.0.0.81" = ["worker1"];
+      "10.0.0.82" = ["worker2"];
     };
 
     # Enables DHCP on each ethernet and wireless interface.

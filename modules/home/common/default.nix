@@ -1,14 +1,15 @@
 {lib, ...}: {
   imports = [
     ./bash.nix
+    ./cuda.nix
     ./git.nix
     ./nix-direnv.nix
     ./tmux.nix
   ];
 
   home = {
-    username = "ai";
-    homeDirectory = lib.mkForce "/home/ai";
+    username = "gpgup";
+    homeDirectory = lib.mkForce "/home/gpgup";
     stateVersion = "25.05";
   };
 }

@@ -10,12 +10,6 @@
         hostname = "github.com";
         identityFile = ["~/.ssh/ai-cluster-github"];
       };
-
-      "worker" = {
-        hostname = "worker";
-        identityFile = ["~/.ssh/ai-cluster-internal"];
-        port = 8102;
-      };
     };
   };
 }

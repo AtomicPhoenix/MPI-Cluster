@@ -8,11 +8,8 @@ in {
   enableTreesitter = true;
 
   nix = enableLanguage // {extraDiagnostics.enable = true;};
-  java = enableLanguage;
-  lua = enableLanguage;
-  python = enableLanguage;
-  go = enableLanguage;
   bash = enableLanguage;
+  clang = enableLanguage;
 
   markdown = {
     enable = true;

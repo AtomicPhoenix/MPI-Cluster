@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    prefix = "C-s";
+    prefix = "C-a";
     baseIndex = 1;
     disableConfirmationPrompt = false;
     focusEvents = true;

@@ -25,6 +25,7 @@
     # Terminal
     tmux
     tree
+    fastfetch
 
     # OpenMPI
     mpi
@@ -38,5 +39,29 @@
     cudaPackages.cuda_cudart
     cudaPackages.backendStdenv
     nvtopPackages.nvidia
+
+    nvidia-container-toolkit
+
+    openmpi
+    gcc13Stdenv.cc
+    bear
+    clang-tools
+    cmake
+    codespell
+    conan
+    cppcheck
+    doxygen
+    gtest
+    lcov
+    mesa
+    mesa-gl-headers
+    glui
+    libGL
+    libGLU
+    pkg-config
+    prrte
+    sfml
+    vcpkg
+    vcpkg-tool
   ];
 }
